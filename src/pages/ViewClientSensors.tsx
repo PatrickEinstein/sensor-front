@@ -4,13 +4,11 @@ interface ViewClientSensorsProps {
   data: IApiData;
 }
 const ViewClientSensors = ({ data }: ViewClientSensorsProps) => {
-    // console.log(`sensor data`, data);
+  // console.log(`sensor data`, data);
 
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">
-        Client: {data.nameOfClient}
-      </h2>
+      <h2 className="text-2xl font-bold mb-4">Client: {data.nameOfClient}</h2>
       <div className="overflow-auto rounded-lg shadow-lg">
         <table className="min-w-full bg-white">
           <thead className="bg-blue-500 text-white">
@@ -34,10 +32,10 @@ const ViewClientSensors = ({ data }: ViewClientSensorsProps) => {
 
                   <td
                     className={`py-2 px-4 font-semibold ${
-                      status === 1 ? "text-green-500" : "text-red-500"
+                      status === 1 ? "text-blue-500" : "text-red-500"
                     }`}
                   >
-                    {status}
+                    {status === 1 ? "ON" : "OFF"}
                   </td>
                   <td className="py-2 px-4">
                     {timestamp ? new Date(timestamp).toLocaleString() : "-"}

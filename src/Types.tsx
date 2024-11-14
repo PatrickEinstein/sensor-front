@@ -17,3 +17,10 @@ interface Sensors {
   status: number;
   timestamp: Date;
 }
+export type typeUserDetails = {
+  token: string;
+  canAssignAdmin: boolean;
+  canDeleteAdmin: boolean;
+  canUpload: boolean;
+  role: string;
+};
